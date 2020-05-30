@@ -1,3 +1,4 @@
+// v-for used for accordion. v-if also used. I need help styling the cards so they close all the way//
 <template>
     <div>
         <h2>

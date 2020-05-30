@@ -1,3 +1,4 @@
+// v-for used in gallery. I need help styling the images to make them uniform in size//
 <template>
     <div id="app">
         <h2>Gallery</h2>

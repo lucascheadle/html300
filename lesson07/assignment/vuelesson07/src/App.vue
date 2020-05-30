@@ -1,4 +1,4 @@
-
+// router utilized. Content created from script section, not hard coded//
 <template>
   <div id="app">
     <div class="header">
