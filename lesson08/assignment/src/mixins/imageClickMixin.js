@@ -1,6 +1,10 @@
+// here's the mixin for the image outline toggle //
+
 export default {
-    data: {
-        isActive: true
+    data() {
+        return {
+            isActive: true
+            }
         },
     methods: {
         toggleClass: function(){

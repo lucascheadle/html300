@@ -1,10 +1,16 @@
-// router utilized. Content created from script section, not hard coded//
+// lesson8: header slot added (header-view) with all caps filter//
+
 <template>
   <div id="app">
     <div class="header">
       <div id="bizname">
         <p class="h1 font-weight-bold text-uppercase pt-4">{{ bizname }}</p>
         <p class="h3">{{ tagline }}</p>
+        <div>
+          <header-view>
+            <h4 slot="subtitle">{{ message | uppercase }}</h4>
+          </header-view>
+        </div>
       </div>
     </div>
     <div id="nav">
@@ -19,12 +25,23 @@
 </template>
 
 <script>
+import Headerview from './components/Headerview.vue'
 export default {
   name: 'app',
+  components: {
+    'header-view': Headerview
+  },
   data () {
+    
     return {
       bizname: 'Cheadle     Design',
-      tagline: 'Landscape - Gardening'
+      tagline: 'Landscape - Gardening',
+      message: 'here is that slot'
+    }
+  },
+  filters: {
+    uppercase(value) {
+      return value.toUpperCase()
     }
   }
 }
@@ -60,6 +77,6 @@ export default {
 .header {
   background-image: radial-gradient(circle, #7ebb05 0%, #42b983 100%);
   background-color: #42b983;
-  height: 125px;
+  height: 150px;
 }
 </style>

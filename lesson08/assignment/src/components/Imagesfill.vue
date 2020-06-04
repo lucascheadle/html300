@@ -1,10 +1,14 @@
+// here is the separate images component using props, incomplete. //
+// mixin added to toggle image outline. selects all images at once, needs tweak //
+
+
 <template>
     <div id="app">
         <h2>Gallery</h2>
         <div class="gallery-container">
             <div class="row px-4">
                 <div v-for= "picture in pictures" v-bind:key="picture.id" class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <b-img v-bind:src= "picture.url" class="garden div" v-bind:style='{"background-color" : (isActive? "orange" : "yellow" )}' @click="toggleClass()"></b-img>
+                    <b-img v-bind:src= "picture.url" class="garden div" v-bind:style='{"border" : (isActive? "none" : "3px solid blue" )}' @click="toggleClass()"></b-img>
                 </div>
             </div>
         </div>
@@ -37,13 +41,13 @@ export default {
     object-fit:cover;
     padding: 1rem;
 }
-.red{
-    background: red;
-}
+/* .red{
+    background: none;
+} */
 
-.blue{
+/* .blue{
     background: blue;
-}
+} */
 
 </style>
 

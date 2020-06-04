@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 
-import Imagesfill from './views/Imagesfill'
+import Imagesfill from './components/Imagesfill'
 
 import vStylish from 'v-stylish';
 import 'bootstrap'
